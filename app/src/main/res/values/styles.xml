@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017-2024 The LineageOS Project
+     Copyright (C) 2025 The HavocOOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
 <resources>
+    <!-- HavocOOS Glassmorphic Theme -->
     <style name="AppTheme" parent="Theme.AppCompat.DayNight">
         <item name="colorPrimary">@color/theme_primary</item>
         <item name="colorPrimaryDark">@color/theme_primary_dark</item>
@@ -9,6 +26,8 @@
         <item name="android:windowLightNavigationBar">@bool/theme_is_light</item>
         <item name="android:windowBackground">@color/background</item>
         <item name="alertDialogTheme">@style/AppTheme.AlertDialogTheme</item>
+        <!-- HavocOOS: Enhanced corner radius for dialogs -->
+        <item name="android:dialogCornerRadius">28dp</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -25,7 +44,16 @@
         <item name="android:dropDownHorizontalOffset">-16dp</item>
     </style>
 
+    <!-- HavocOOS: Glassmorphic AlertDialog Theme -->
     <style name="AppTheme.AlertDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
-        <item name="dialogCornerRadius">16dp</item>
+        <item name="dialogCornerRadius">28dp</item>
+        <item name="android:windowBackground">@drawable/glassmorphic_dialog_bg</item>
+    </style>
+    
+    <!-- HavocOOS: Glassmorphic Card Style -->
+    <style name="HavocOOSCardStyle">
+        <item name="android:background">@drawable/glassmorphic_card_bg</item>
+        <item name="android:clipToPadding">false</item>
+        <item name="android:clipChildren">false</item>
     </style>
 </resources>
