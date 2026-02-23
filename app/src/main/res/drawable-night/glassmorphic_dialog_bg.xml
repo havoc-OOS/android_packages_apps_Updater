@@ -14,26 +14,26 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!-- HavocOOS Enhanced Glassmorphic Card Background with Premium Multi-Layer Effects -->
+<!-- HavocOOS Enhanced Glassmorphic Dialog Background - Dark Theme with Premium Multi-Layer Effects -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     
-    <!-- Layer 1: Deep base gradient for 3D depth simulation -->
+    <!-- Layer 1: Deep base gradient for 3D depth simulation (dark mode) -->
     <item>
         <shape android:shape="rectangle">
             <gradient
                 android:angle="135"
-                android:startColor="#18FFFFFF"
-                android:centerColor="#0AFFFFFF"
-                android:endColor="#04FFFFFF"
+                android:startColor="#1A1A2E"
+                android:centerColor="#16213E"
+                android:endColor="#0F0F23"
                 android:type="linear"/>
             <corners android:radius="28dp"/>
         </shape>
     </item>
     
-    <!-- Layer 2: Primary frosted glass surface -->
+    <!-- Layer 2: Primary frosted glass surface (more opaque for dialogs) -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#40FFFFFF"/>
+            <solid android:color="#45FFFFFF"/>
             <corners android:radius="28dp"/>
         </shape>
     </item>
@@ -45,8 +45,8 @@
         <shape android:shape="rectangle">
             <gradient
                 android:angle="90"
-                android:startColor="#55FFFFFF"
-                android:centerColor="#25FFFFFF"
+                android:startColor="#38FFFFFF"
+                android:centerColor="#18FFFFFF"
                 android:endColor="#00FFFFFF"
                 android:type="linear"/>
             <corners android:radius="28dp"/>
@@ -60,7 +60,7 @@
         <shape android:shape="rectangle">
             <gradient
                 android:angle="90"
-                android:startColor="#48FFFFFF"
+                android:startColor="#30FFFFFF"
                 android:centerColor="#00FFFFFF"
                 android:endColor="#00FFFFFF"
                 android:type="linear"/>
@@ -75,7 +75,7 @@
             <corners android:radius="28dp"/>
             <stroke
                 android:width="1.5dp"
-                android:color="#50FFFFFF"/>
+                android:color="#40FFFFFF"/>
         </shape>
     </item>
     
@@ -86,14 +86,14 @@
             <corners android:radius="28dp"/>
             <stroke
                 android:width="0.5dp"
-                android:color="#20FFFFFF"/>
+                android:color="#18FFFFFF"/>
         </shape>
     </item>
     
     <!-- Layer 7: Accent color tint overlay (subtle) -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#08FF8A65"/>
+            <solid android:color="#06FF8A65"/>
             <corners android:radius="28dp"/>
         </shape>
     </item>

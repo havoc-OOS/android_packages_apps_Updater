@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2017-2024 The LineageOS Project
+     Copyright (C) 2025 The HavocOOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- HavocOOS Enhanced Glassmorphic Design Dimensions -->
+    
+    <!-- Glassmorphic corner radius (Material 3 Expressive) -->
+    <dimen name="havoc_corner_radius">28dp</dimen>
+    
+    <!-- Enhanced corner radius for cards -->
+    <dimen name="havoc_card_corner_radius">28dp</dimen>
+    
+    <!-- Button corner radius -->
+    <dimen name="havoc_button_corner_radius">20dp</dimen>
+    
+    <!-- Glassmorphic card margins -->
+    <dimen name="havoc_preference_margin_horizontal">12dp</dimen>
+    <dimen name="havoc_preference_margin_vertical">6dp</dimen>
+    
+    <!-- Glassmorphic border widths -->
+    <dimen name="havoc_border_width_thin">0.5dp</dimen>
+    <dimen name="havoc_border_width_normal">1.5dp</dimen>
+    <dimen name="havoc_border_width_thick">2dp</dimen>
+    
+    <!-- Glassmorphic elevation/shadow simulation -->
+    <dimen name="havoc_elevation_low">2dp</dimen>
+    <dimen name="havoc_elevation_medium">4dp</dimen>
+    <dimen name="havoc_elevation_high">8dp</dimen>
+    
+    <!-- Glassmorphic padding values -->
+    <dimen name="havoc_padding_compact">8dp</dimen>
+    <dimen name="havoc_padding_normal">12dp</dimen>
+    <dimen name="havoc_padding_relaxed">16dp</dimen>
+    <dimen name="havoc_padding_spacious">20dp</dimen>
+    
+    <!-- Header dimensions -->
+    <dimen name="expanded_title_margin_start">16dp</dimen>
+    <dimen name="expanded_title_margin_end">16dp</dimen>
+    
+    <!-- Card content padding -->
+    <dimen name="card_content_padding">20dp</dimen>
+    <dimen name="card_header_padding">20dp</dimen>
+    
+    <!-- Dialog dimensions -->
+    <dimen name="dialog_corner_radius">28dp</dimen>
+    <dimen name="dialog_padding">24dp</dimen>
+    
+    <!-- Progress bar dimensions -->
+    <dimen name="progress_bar_height">8dp</dimen>
+    <dimen name="progress_indicator_size">48dp</dimen>
+    
+    <!-- Text sizes -->
+    <dimen name="text_size_header_title">48sp</dimen>
+    <dimen name="text_size_header_subtitle">14sp</dimen>
+    <dimen name="text_size_card_title">18sp</dimen>
+    <dimen name="text_size_card_body">14sp</dimen>
+    <dimen name="text_size_button">14sp</dimen>
+</resources>

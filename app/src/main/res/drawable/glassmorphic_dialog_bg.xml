@@ -14,38 +14,53 @@
   See the License for the specific language governing permissions and
   limitations under the License.
 -->
-<!-- HavocOOS Glassmorphic Dialog Background -->
+<!-- HavocOOS Enhanced Glassmorphic Dialog Background with Premium Multi-Layer Effects -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     
-    <!-- Layer 1: Base gradient for depth simulation -->
+    <!-- Layer 1: Deep base gradient for 3D depth simulation -->
     <item>
         <shape android:shape="rectangle">
             <gradient
                 android:angle="135"
-                android:startColor="#15FFFFFF"
-                android:centerColor="#08FFFFFF"
-                android:endColor="#03FFFFFF"
+                android:startColor="#18FFFFFF"
+                android:centerColor="#0AFFFFFF"
+                android:endColor="#04FFFFFF"
                 android:type="linear"/>
             <corners android:radius="28dp"/>
         </shape>
     </item>
     
-    <!-- Layer 2: Primary semi-transparent glass surface -->
+    <!-- Layer 2: Primary frosted glass surface (more opaque for dialogs) -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#45FFFFFF"/>
+            <solid android:color="#50FFFFFF"/>
             <corners android:radius="28dp"/>
         </shape>
     </item>
     
-    <!-- Layer 3: Top highlight for glass reflection effect -->
+    <!-- Layer 3: Radial highlight for premium glass effect -->
+    <item
+        android:top="0dp"
+        android:bottom="50%">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="90"
+                android:startColor="#60FFFFFF"
+                android:centerColor="#30FFFFFF"
+                android:endColor="#00FFFFFF"
+                android:type="linear"/>
+            <corners android:radius="28dp"/>
+        </shape>
+    </item>
+    
+    <!-- Layer 4: Top edge highlight for glass reflection -->
     <item
         android:top="0dp"
         android:bottom="0dp">
         <shape android:shape="rectangle">
             <gradient
                 android:angle="90"
-                android:startColor="#50FFFFFF"
+                android:startColor="#55FFFFFF"
                 android:centerColor="#00FFFFFF"
                 android:endColor="#00FFFFFF"
                 android:type="linear"/>
@@ -53,14 +68,33 @@
         </shape>
     </item>
     
-    <!-- Layer 4: Inner glow border effect -->
+    <!-- Layer 5: Inner glow border effect -->
     <item>
         <shape android:shape="rectangle">
             <solid android:color="#00FFFFFF"/>
             <corners android:radius="28dp"/>
             <stroke
                 android:width="1.5dp"
-                android:color="#50FFFFFF"/>
+                android:color="#55FFFFFF"/>
+        </shape>
+    </item>
+    
+    <!-- Layer 6: Outer subtle shadow/border for depth -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#00FFFFFF"/>
+            <corners android:radius="28dp"/>
+            <stroke
+                android:width="0.5dp"
+                android:color="#25FFFFFF"/>
+        </shape>
+    </item>
+    
+    <!-- Layer 7: Accent color tint overlay (subtle) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#08FF8A65"/>
+            <corners android:radius="28dp"/>
         </shape>
     </item>
     

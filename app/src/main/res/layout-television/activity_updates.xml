@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2017-2024 The LineageOS Project
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- HavocOOS: Enhanced Glassmorphic TV Activity Layout -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
@@ -8,8 +25,10 @@
     android:fitsSystemWindows="true"
     android:padding="16dp"
     android:weightSum="2"
-    android:baselineAligned="false">
+    android:baselineAligned="false"
+    android:background="@android:color/transparent">
 
+    <!-- HavocOOS: Enhanced Glassmorphic Header Container -->
     <RelativeLayout
         android:id="@+id/header_container"
         android:layout_width="0dp"
@@ -17,7 +36,10 @@
         android:layout_weight="1"
         android:paddingEnd="16dp"
         android:paddingStart="16dp"
-        android:layout_gravity="start">
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_gravity="start"
+        android:background="@drawable/glassmorphic_card_bg">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,33 +54,39 @@
                 android:paddingBottom="16dp"
                 android:textColor="?android:attr/textColorPrimary"
                 android:textSize="56sp"
-                tools:text="LineageOS\n20" />
+                android:letterSpacing="-0.02"
+                tools:text="HavocOOS\n1.0" />
 
             <TextView
                 android:id="@+id/header_build_version"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="?android:attr/textColorPrimary"
+                android:textColor="@color/havoc_accent"
                 android:textSize="14sp"
-                tools:text="Android 13"/>
+                android:fontFamily="sans-serif-medium"
+                tools:text="Android 15"/>
 
             <TextView
                 android:id="@+id/header_build_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginTop="4dp"
+                android:textColor="?android:attr/textColorSecondary"
                 android:textSize="14sp"
-                tools:text="1970-01-01"/>
+                tools:text="Build: 2026-02-23"/>
 
             <TextView
                 android:id="@+id/header_last_check"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="?android:attr/textColorPrimary"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/havoc_accent"
                 android:textSize="14sp"
-                tools:text="Last checked: 1970-01-01"/>
+                android:fontFamily="sans-serif-medium"
+                tools:text="Last checked: 2026-02-23"/>
 
         </LinearLayout>
+        
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -73,7 +101,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/menu_refresh"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+                android:background="@drawable/glassmorphic_button_bg"
+                android:textColor="@color/havoc_accent"/>
 
             <Button
                 android:id="@+id/preferences"
@@ -81,8 +110,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:layout_marginStart="8dp"
                 android:text="@string/menu_preferences"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+                android:background="@drawable/glassmorphic_button_bg"
+                android:textColor="@color/havoc_accent"/>
 
         </LinearLayout>
     </RelativeLayout>
@@ -95,18 +126,22 @@
         android:paddingStart="16dp"
         android:layout_gravity="end">
 
+        <!-- HavocOOS: Enhanced Glassmorphic No Updates View -->
         <androidx.core.widget.NestedScrollView
             android:id="@+id/no_new_updates_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="46dp">
+            android:padding="46dp"
+            android:background="@drawable/glassmorphic_card_bg">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/list_no_updates"
-                android:textColor="?android:textColorSecondary" />
+                android:textColor="?android:textColorSecondary"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"/>
         </androidx.core.widget.NestedScrollView>
 
         <androidx.recyclerview.widget.RecyclerView
@@ -126,7 +161,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:visibility="gone"/>
+            android:visibility="gone"
+            android:indeterminateTint="@color/havoc_accent"/>
 
     </RelativeLayout>
 </LinearLayout>

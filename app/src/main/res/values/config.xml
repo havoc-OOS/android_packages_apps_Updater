@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2020 The LineageOS Project
+     Copyright (C) 2025 The HavocOOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -15,5 +16,17 @@
      limitations under the License.
 -->
 <resources>
+    <!-- HavocOOS Configuration -->
     <bool name="config_hideRecoveryUpdate">false</bool>
+    
+    <!-- HavocOOS Branding Configuration -->
+    <!-- App name displayed in the UI -->
+    <string name="config_appName" translatable="false">HavocOOS Updater</string>
+    
+    <!-- HavocOOS version display format -->
+    <bool name="config_showHavocBranding">true</bool>
+    
+    <!-- Glassmorphic UI Configuration -->
+    <bool name="config_enableGlassmorphicUI">true</bool>
+    <bool name="config_showWallpaper">true</bool>
 </resources>

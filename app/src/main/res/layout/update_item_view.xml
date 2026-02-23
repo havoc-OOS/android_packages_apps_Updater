@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2017-2024 The LineageOS Project
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- HavocOOS: Enhanced Glassmorphic Update Item View -->
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -8,17 +25,27 @@
     android:focusable="true"
     android:foreground="?attr/selectableItemBackground"
     android:nextFocusRight="@+id/update_action"
-    android:layout_marginTop="8dp"
-    android:layout_marginStart="8dp"
-    android:layout_marginEnd="8dp"
-    app:cardCornerRadius="16dp"
-    app:contentPadding="16dp">
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="6dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    app:cardBackgroundColor="@android:color/transparent"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="0dp"
+    app:cardPreventCornerOverlap="false">
+
+    <!-- HavocOOS: Enhanced Glassmorphic Background Layer -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/glassmorphic_card_bg"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:weightSum="1"
+        android:padding="20dp"
         android:baselineAligned="false">
 
         <LinearLayout
@@ -27,17 +54,19 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
+            <!-- HavocOOS: Enhanced Build Version Text -->
             <TextView
                 android:id="@+id/build_version"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:alpha="0.87"
+                android:alpha="0.95"
                 android:drawablePadding="8dp"
                 android:maxLines="1"
                 android:paddingBottom="8sp"
                 android:textColor="?android:attr/textColorPrimary"
-                android:textSize="16sp"
-                tools:text="LineageOS 20" />
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-medium"
+                tools:text="HavocOOS 1.0" />
 
             <TextView
                 android:id="@+id/build_date"
@@ -45,11 +74,13 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:textSize="14sp"
-                tools:text="18 June 2023" />
+                android:textColor="?android:attr/textColorSecondary"
+                tools:text="23 February 2026" />
 
             <RelativeLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -58,21 +89,27 @@
                     android:visibility="invisible"
                     tools:visibility="visible">
 
+                    <!-- HavocOOS: Enhanced Progress Bar -->
                     <ProgressBar
                         android:id="@+id/progress_bar"
                         style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                         android:layout_width="0dp"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="4sp"
+                        android:layout_height="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:progressTint="@color/havoc_accent"
+                        android:progressBackgroundTint="@color/havoc_progress_track"
                         tools:progress="65" />
 
                     <TextView
                         android:id="@+id/progress_percent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:paddingStart="8dp"
-                        android:paddingEnd="8dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="4dp"
+                        android:textColor="@color/havoc_accent"
+                        android:textSize="14sp"
+                        android:fontFamily="sans-serif-medium"
                         tools:text="65%" />
                 </LinearLayout>
 
@@ -83,6 +120,8 @@
                     android:layout_below="@id/progress"
                     android:ellipsize="marquee"
                     android:singleLine="true"
+                    android:textSize="12sp"
+                    android:textColor="?android:attr/textColorSecondary"
                     android:visibility="invisible"
                     tools:text="162 of 1.1 GB (3 minutes left)"
                     tools:visibility="visible" />
@@ -93,6 +132,8 @@
                     android:layout_height="wrap_content"
                     android:paddingTop="8sp"
                     android:singleLine="true"
+                    android:textSize="13sp"
+                    android:textColor="?android:attr/textColorSecondary"
                     tools:text="1.1 GB"
                     tools:visibility="invisible" />
             </RelativeLayout>
@@ -101,7 +142,10 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
+            
+            <!-- HavocOOS: Enhanced Menu Button -->
             <ImageButton
                 android:id="@+id/update_menu"
                 style="?android:attr/actionOverflowButtonStyle"
@@ -109,15 +153,17 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:padding="8dp"
+                android:background="?android:selectableItemBackgroundBorderless"
                 android:contentDescription="@null" />
+            
+            <!-- HavocOOS: Enhanced Action Button with Glassmorphic Style -->
             <Button
                 android:id="@id/update_action"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:background="?android:selectableItemBackgroundBorderless"
+                style="@style/HavocOOSButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="8dp"
-                tools:text="Pause" />
+                android:minWidth="100dp"
+                tools:text="Download" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

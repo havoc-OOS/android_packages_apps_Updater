@@ -27,12 +27,42 @@
 
     <color name="inverted">#212121</color>
     
-    <!-- HavocOOS Glassmorphic Colors -->
-    <color name="havoc_glass_surface">#35FFFFFF</color>
-    <color name="havoc_glass_surface_dark">#28000000</color>
-    <color name="havoc_glass_border">#45FFFFFF</color>
-    <color name="havoc_glass_border_dark">#18FFFFFF</color>
+    <!-- HavocOOS Enhanced Glassmorphic Colors -->
+    <!-- Light Theme Glass Surface Colors -->
+    <color name="havoc_glass_surface">#40FFFFFF</color>
+    <color name="havoc_glass_surface_highlight">#55FFFFFF</color>
+    <color name="havoc_glass_border">#50FFFFFF</color>
+    <color name="havoc_glass_border_outer">#20FFFFFF</color>
+    <color name="havoc_glass_gradient_start">#18FFFFFF</color>
+    <color name="havoc_glass_gradient_center">#0AFFFFFF</color>
+    <color name="havoc_glass_gradient_end">#04FFFFFF</color>
+    
+    <!-- Dark Theme Glass Surface Colors -->
+    <color name="havoc_glass_surface_dark">#35FFFFFF</color>
+    <color name="havoc_glass_surface_highlight_dark">#30FFFFFF</color>
+    <color name="havoc_glass_border_dark">#35FFFFFF</color>
+    <color name="havoc_glass_border_outer_dark">#15FFFFFF</color>
+    <color name="havoc_glass_gradient_start_dark">#1A1A2E</color>
+    <color name="havoc_glass_gradient_center_dark">#16213E</color>
+    <color name="havoc_glass_gradient_end_dark">#0F0F23</color>
+    
+    <!-- HavocOOS Accent Colors -->
     <color name="havoc_accent">#FF8A65</color>
+    <color name="havoc_accent_dim">#30FF8A65</color>
+    <color name="havoc_accent_tint">#08FF8A65</color>
+    <color name="havoc_accent_button_tint">#10FF8A65</color>
+    
+    <!-- Ripple Colors -->
     <color name="havoc_ripple">#30FFFFFF</color>
     <color name="havoc_ripple_dark">#20FFFFFF</color>
+    
+    <!-- Text Colors -->
+    <color name="havoc_text_primary">#DE000000</color>
+    <color name="havoc_text_secondary">#8A000000</color>
+    <color name="havoc_text_primary_dark">#FFFFFFFF</color>
+    <color name="havoc_text_secondary_dark">#B3FFFFFF</color>
+    
+    <!-- Progress Bar Colors -->
+    <color name="havoc_progress_track">#30FFFFFF</color>
+    <color name="havoc_progress_track_dark">#20FFFFFF</color>
 </resources>

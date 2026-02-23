@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  Copyright (C) 2017-2024 The LineageOS Project
+  Copyright (C) 2025 The HavocOOS Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<!-- HavocOOS: Enhanced Glassmorphic Updater Activity Layout -->
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,7 +23,8 @@
     android:id="@+id/main_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:background="@android:color/transparent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
@@ -15,7 +33,7 @@
         android:fitsSystemWindows="true"
         android:outlineAmbientShadowColor="@android:color/transparent"
         android:outlineSpotShadowColor="@android:color/transparent"
-        android:background="?android:attr/colorPrimary"
+        android:background="@drawable/glassmorphic_header_bg"
         android:theme="@style/Theme.CollapsingToolbar.Settings">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
@@ -38,14 +56,19 @@
             app:expandedTitleMarginEnd="@dimen/expanded_title_margin_end"
             app:toolbarId="@id/action_bar">
 
+            <!-- HavocOOS: Enhanced Glassmorphic Header Container -->
             <RelativeLayout
                 android:id="@+id/header_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="86dp"
-                android:paddingBottom="16dp"
-                android:paddingEnd="16dp"
-                android:paddingStart="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:paddingBottom="24dp"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="8dp"
+                android:background="@drawable/glassmorphic_card_bg"
                 app:layout_collapseMode="parallax">
 
                 <TextView
@@ -55,26 +78,29 @@
                     android:fontFamily="sans-serif-light"
                     android:paddingBottom="16dp"
                     android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="56sp"
-                    tools:text="LineageOS\n20"/>
+                    android:textSize="48sp"
+                    android:letterSpacing="-0.02"
+                    tools:text="HavocOOS\n1.0"/>
 
                 <TextView
                     android:id="@+id/header_build_version"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/header_title"
-                    android:textColor="?android:attr/textColorPrimary"
-                    android:textSize="12sp"
-                    tools:text="Android 13"/>
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    tools:text="Android 15"/>
 
                 <TextView
                     android:id="@+id/header_build_date"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/header_build_version"
-                    android:textColor="?android:attr/textColorPrimary"
+                    android:layout_marginTop="4dp"
+                    android:textColor="?android:attr/textColorSecondary"
                     android:textSize="12sp"
-                    tools:text="1970-01-01"/>
+                    tools:text="Build: 2026-02-23"/>
 
                 <TextView
                     android:id="@+id/header_last_check"
@@ -82,9 +108,10 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/header_build_date"
                     android:layout_marginTop="8dp"
-                    android:textColor="?android:attr/textColorPrimary"
+                    android:textColor="@color/havoc_accent"
                     android:textSize="12sp"
-                    tools:text="Last checked: 1970-01-01"/>
+                    android:fontFamily="sans-serif-medium"
+                    tools:text="Last checked: 2026-02-23"/>
             </RelativeLayout>
 
             <androidx.appcompat.widget.Toolbar
@@ -97,11 +124,14 @@
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
+    <!-- HavocOOS: Enhanced Glassmorphic No Updates View -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/no_new_updates_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="46dp"
+        android:layout_margin="16dp"
+        android:padding="32dp"
+        android:background="@drawable/glassmorphic_card_bg"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <TextView
@@ -109,15 +139,19 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="@string/list_no_updates"
-            android:textColor="?android:textColorSecondary" />
+            android:textColor="?android:textColorSecondary"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif-medium"/>
     </androidx.core.widget.NestedScrollView>
 
+    <!-- HavocOOS: Updates RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingBottom="5dp"
+        android:paddingBottom="16dp"
+        android:paddingTop="8dp"
         android:scrollbars="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:listitem="@layout/update_item_view" />

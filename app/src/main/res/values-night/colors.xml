@@ -25,12 +25,39 @@
 
     <color name="inverted">#f5f5f5</color>
     
-    <!-- HavocOOS Glassmorphic Colors (Dark Mode) -->
-    <color name="havoc_glass_surface">#28000000</color>
-    <color name="havoc_glass_surface_dark">#30000000</color>
-    <color name="havoc_glass_border">#18FFFFFF</color>
-    <color name="havoc_glass_border_dark">#20FFFFFF</color>
+    <!-- HavocOOS Enhanced Glassmorphic Colors (Dark Mode) -->
+    <!-- Dark Theme Glass Surface Colors -->
+    <color name="havoc_glass_surface">#35FFFFFF</color>
+    <color name="havoc_glass_surface_highlight">#30FFFFFF</color>
+    <color name="havoc_glass_border">#35FFFFFF</color>
+    <color name="havoc_glass_border_outer">#15FFFFFF</color>
+    <color name="havoc_glass_gradient_start">#1A1A2E</color>
+    <color name="havoc_glass_gradient_center">#16213E</color>
+    <color name="havoc_glass_gradient_end">#0F0F23</color>
+    
+    <!-- Additional Dark Theme Glass Surface Colors -->
+    <color name="havoc_glass_surface_dark">#38FFFFFF</color>
+    <color name="havoc_glass_surface_highlight_dark">#35FFFFFF</color>
+    <color name="havoc_glass_border_dark">#40FFFFFF</color>
+    <color name="havoc_glass_border_outer_dark">#18FFFFFF</color>
+    
+    <!-- HavocOOS Accent Colors -->
     <color name="havoc_accent">#FF8A65</color>
+    <color name="havoc_accent_dim">#25FF8A65</color>
+    <color name="havoc_accent_tint">#06FF8A65</color>
+    <color name="havoc_accent_button_tint">#10FF8A65</color>
+    
+    <!-- Ripple Colors -->
     <color name="havoc_ripple">#20FFFFFF</color>
     <color name="havoc_ripple_dark">#15FFFFFF</color>
+    
+    <!-- Text Colors -->
+    <color name="havoc_text_primary">#FFFFFFFF</color>
+    <color name="havoc_text_secondary">#B3FFFFFF</color>
+    <color name="havoc_text_primary_dark">#DE000000</color>
+    <color name="havoc_text_secondary_dark">#8A000000</color>
+    
+    <!-- Progress Bar Colors -->
+    <color name="havoc_progress_track">#20FFFFFF</color>
+    <color name="havoc_progress_track_dark">#15FFFFFF</color>
 </resources>
