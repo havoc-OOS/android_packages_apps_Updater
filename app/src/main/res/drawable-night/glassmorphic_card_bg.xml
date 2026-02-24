@@ -41,7 +41,7 @@
     <!-- Layer 3: Radial highlight for premium glass effect -->
     <item
         android:top="0dp"
-        android:bottom="50%">
+        android:bottom="32dp">
         <shape android:shape="rectangle">
             <gradient
                 android:angle="90"

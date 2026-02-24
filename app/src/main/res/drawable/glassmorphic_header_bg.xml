@@ -39,7 +39,7 @@
     <!-- Layer 3: Top highlight for glass reflection effect -->
     <item
         android:top="0dp"
-        android:bottom="70%">
+        android:bottom="20dp">
         <shape android:shape="rectangle">
             <gradient
                 android:angle="90"
